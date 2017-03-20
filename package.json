@@ -1,0 +1,11 @@
+{
+  "name": "react-starter",
+  "version": "1.0.0",
+  "private": true,
+  "author": {
+    "name": "Ruan Mer",
+    "email": "ruanrm@gmail.com",
+    "url": "http://ruanmer.com"
+  },
+  "license": "MIT"
+}
