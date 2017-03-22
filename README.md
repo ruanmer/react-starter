@@ -5,6 +5,7 @@ React Starter is a web app boilerplate using React, Webpack, Babel.
 ## Install
 
 ```
+git clone https://github.com/ruanmer/react-starter
 npm install
 ```
 
@@ -26,6 +27,6 @@ Compiles all files. Output is sent to the `public` directory.
 $ npm run dev
 ```
 
-Runs your application in the browser. Auto-compile & auto-reload the server after any file changes within the `src` directory.
+Runs your application in the browser (http://localhost:9000). Auto-compile & auto-reload the server after any file changes within the `src` directory.
 
 > You can also use [Yarn](https://yarnpkg.com/) to run the commands above.

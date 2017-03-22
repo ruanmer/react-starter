@@ -1,8 +1,8 @@
 const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const config = require('./config');
-const { paths, browsers } = config;
+
+const browsers = ['last 2 versions'];
 
 module.exports = () => {
   const ifDev = plugin => process.env.NODE_ENV === 'development' ? plugin : undefined;
@@ -11,18 +11,18 @@ module.exports = () => {
 
   return {
     entry: {
-      app: path.join(__dirname, `${paths.app_src}/app.js`)
+      app: './app/src/app.js'
     },
 
     output: {
-      path: path.join(__dirname, paths.build),
+      path: path.join(__dirname, 'public'),
       filename: '[name].[hash].js'
     },
 
     resolve: {
       modules: [
-        paths.app,
-        paths.app_src,
+        'app',
+        'app/src',
         'node_modules'
       ],
       extensions: ['.js', '.jsx']
@@ -36,7 +36,7 @@ module.exports = () => {
 
     devServer: {
       port: 9000,
-      contentBase: path.join(__dirname, paths.build),
+      contentBase: path.join(__dirname, 'public'),
       historyApiFallback: true,
       stats: {
         children: false
@@ -68,11 +68,12 @@ module.exports = () => {
 
     plugins: removeEmpty([
       new HtmlWebpackPlugin({
-        template: path.join(__dirname, `${paths.app}/index.html`)
+        template: './app/index.html'
       }),
 
       ifBuild(new webpack.optimize.UglifyJsPlugin({
         compress: {
+          comparisons: true,
           conditionals: true,
           warnings: false,
           dead_code: true,
