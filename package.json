@@ -9,8 +9,8 @@
   },
   "license": "MIT",
   "scripts": {
-    "dev": "NODE_ENV=development webpack-dev-server",
-    "build": "rm -Rf public/* | NODE_ENV=production webpack -p"
+    "dev": "NODE_ENV=development webpack-dev-server --config webpack/webpack",
+    "build": "rm -Rf public/* | NODE_ENV=production webpack -p --config webpack/webpack"
   },
   "dependencies": {
     "react": "^15.4.2",
