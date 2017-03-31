@@ -30,3 +30,14 @@ $ npm run dev
 Runs your application in the browser (http://localhost:9000). Auto-compile & auto-reload the server after any file changes within the `src` directory.
 
 > You can also use [Yarn](https://yarnpkg.com/) to run the commands above.
+
+## Features
+
+* [styled-components](https://github.com/styled-components/styled-components)
+* ES2015 (ES6) and ES2016 (ES7) support
+
+## Upcoming
+
+* [react-router](https://github.com/ReactTraining/react-router)
+* [ESLint](http://eslint.org/)
+* Hot Module Replacement (HMR)
