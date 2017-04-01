@@ -1,11 +1,9 @@
 import React from 'react';
 import { render } from 'react-dom';
 
-import './global-styles';
-
-import HelloView from 'views/HelloView';
+import App from './App';
 
 render(
-  <HelloView />,
+  <App />,
   document.getElementById('App')
 );

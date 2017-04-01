@@ -12,7 +12,7 @@ module.exports = () => {
 
   const config = {
     entry: {
-      app: './app/src/app.js'
+      app: './app/src/index.js'
     },
 
     output: {
