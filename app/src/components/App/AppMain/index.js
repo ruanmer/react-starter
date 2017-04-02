@@ -1,3 +1,1 @@
-import AppMain from './AppMain';
-
-export default AppMain;
+export default from './AppMain';

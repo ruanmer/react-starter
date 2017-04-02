@@ -16,6 +16,9 @@ module.exports = (config, isProd) => {
               useBuiltIns: true
             }],
             'react'
+          ],
+          plugins: [
+            'transform-export-extensions'
           ]
         }
       }
