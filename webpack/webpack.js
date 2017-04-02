@@ -1,16 +1,12 @@
 const path = require('path');
-const { merge } = require('lodash');
-
-const devConfig = require('./dev.config');
-const prodConfig = require('./prod.config');
 
 const plugins = require('./plugins');
 const loaders = require('./loaders');
 
 module.exports = () => {
-  const env = process.env.NODE_ENV;
+  const isProd = process.env.NODE_ENV === 'production';
 
-  const config = {
+  let config = {
     entry: {
       app: './app/src/index.js'
     },
@@ -33,12 +29,20 @@ module.exports = () => {
       children: false
     },
 
-    module: loaders(env),
-    plugins: plugins(env),
+    devtool: !isProd ? 'source-map' : false,
+
+    devServer: {
+      port: 9000,
+      contentBase: path.join(__dirname, '../public'),
+      historyApiFallback: true,
+      stats: {
+        children: false
+      }
+    }
   };
 
-  return merge(
-    config,
-    env === 'production' ? prodConfig : devConfig
-  );
+  config = loaders(config, isProd);
+  config = plugins(config, isProd);
+
+  return config;
 };

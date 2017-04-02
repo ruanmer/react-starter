@@ -3,20 +3,18 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const uglifyConfig = require('./uglify.config');
 
-module.exports = env => {
-  const plugins = [];
-
-  plugins.push(
+module.exports = (config, isProd) => {
+  config.plugins = [
     new HtmlWebpackPlugin({
       template: './app/index.html'
     })
-  );
+  ];
 
-  if (env === 'production') {
-    plugins.push(
+  if (isProd) {
+    config.plugins.push(
       new webpack.optimize.UglifyJsPlugin(uglifyConfig)
     );
   }
 
-  return plugins;
+  return config;
 };
