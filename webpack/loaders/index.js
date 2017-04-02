@@ -15,6 +15,7 @@ module.exports = (config, isProd) => {
               modules: false,
               useBuiltIns: true
             }],
+            'stage-2',
             'react'
           ],
           plugins: [
