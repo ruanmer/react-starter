@@ -37,3 +37,4 @@ Runs your application in the browser (http://localhost:9000). Auto-compile & aut
 * [styled-components](https://github.com/styled-components/styled-components)
 * ES2015 (ES6) and ES2016 (ES7) support
 * [ESLint](http://eslint.org/)
+* [Webpack Bundle Analyzer](https://github.com/th0r/webpack-bundle-analyzer)

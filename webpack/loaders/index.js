@@ -1,4 +1,4 @@
-module.exports = (config, isProd) => {
+module.exports = config => {
   config.module = {
     rules: [
       {

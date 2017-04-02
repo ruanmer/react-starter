@@ -3,8 +3,13 @@ const path = require('path');
 const plugins = require('./plugins');
 const loaders = require('./loaders');
 
+const envUtils = {
+  isProd: process.env.NODE_ENV === 'production',
+  isAnalyzer: process.env.ANALYZER
+};
+
 module.exports = () => {
-  const isProd = process.env.NODE_ENV === 'production';
+  const { isProd } = envUtils;
 
   let config = {
     entry: {
@@ -41,8 +46,8 @@ module.exports = () => {
     }
   };
 
-  config = loaders(config, isProd);
-  config = plugins(config, isProd);
+  config = loaders(config, envUtils);
+  config = plugins(config, envUtils);
 
   return config;
 };

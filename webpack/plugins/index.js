@@ -1,9 +1,10 @@
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 
 const uglifyConfig = require('./uglify.config');
 
-module.exports = (config, isProd) => {
+module.exports = (config, { isProd, isAnalyzer }) => {
   config.plugins = [
     new HtmlWebpackPlugin({
       template: './app/index.html'
@@ -13,6 +14,12 @@ module.exports = (config, isProd) => {
   if (isProd) {
     config.plugins.push(
       new webpack.optimize.UglifyJsPlugin(uglifyConfig)
+    );
+  }
+
+  if (isAnalyzer) {
+    config.plugins.push(
+      new BundleAnalyzerPlugin()
     );
   }
 
