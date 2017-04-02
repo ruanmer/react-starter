@@ -9,6 +9,7 @@
   },
   "license": "MIT",
   "scripts": {
+    "lint": "eslint webpack app --ext .js,.jsx",
     "dev": "NODE_ENV=development webpack-dev-server --config webpack/webpack",
     "build": "rm -Rf public/* | NODE_ENV=production webpack -p --config webpack/webpack"
   },
@@ -20,9 +21,12 @@
   },
   "devDependencies": {
     "babel-core": "^6.24.0",
+    "babel-eslint": "^7.2.1",
     "babel-loader": "^6.4.1",
     "babel-preset-env": "^1.2.2",
     "babel-preset-react": "^6.23.0",
+    "eslint": "^3.19.0",
+    "eslint-plugin-react": "^6.10.3",
     "html-webpack-plugin": "^2.28.0",
     "webpack": "^2.2.1",
     "webpack-dev-server": "^2.4.2"
