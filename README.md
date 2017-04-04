@@ -27,7 +27,15 @@ Compiles all files. Output is sent to the `public` directory.
 $ npm run dev
 ```
 
-Runs your application in the browser (http://localhost:9000). Auto-compile & auto-reload the server after any file changes within the `src` directory.
+Runs your application in the browser (http://localhost:9000). Auto-compile & auto-reload the server after any file changes within the `app` directory.
+
+#### build-analyzer
+
+```
+$ npm run build-analyzer
+```
+
+Compiles all files and runs bundle analyzer in the browser (http://localhost:8888).
 
 > You can also use [Yarn](https://yarnpkg.com/) to run the commands above.
 
