@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Bundle should render null when no Component is returned 1`] = `null`;
+
+exports[`Bundle should render the given Component 1`] = `"<div>Mock Component</div>"`;

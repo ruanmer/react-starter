@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AppHeader should renders 1`] = `
+<styled.header>
+  <nav>
+    <Styled(NavLink)
+      exact={true}
+      to="/"
+    >
+      Home
+    </Styled(NavLink)>
+     | 
+    <Styled(NavLink)
+      to="/about"
+    >
+      About
+    </Styled(NavLink)>
+  </nav>
+</styled.header>
+`;
