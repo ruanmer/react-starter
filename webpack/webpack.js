@@ -18,7 +18,8 @@ module.exports = () => {
 
     output: {
       path: path.join(__dirname, '../public'),
-      filename: '[name].[hash].js'
+      filename: '[name].[hash].js',
+      chunkFilename: '[name].[hash].js'
     },
 
     resolve: {

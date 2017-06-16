@@ -1,10 +1,16 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 
+import Bundle from 'utils/Bundle';
+
 import AppHeader from 'components/App/AppHeader';
 import AppMain from 'components/App/AppMain';
-import Home from 'views/Home';
-import About from 'views/About';
+
+import loadHome from 'bundle-loader?lazy&name=home!views/Home';
+import loadAbout from 'bundle-loader?lazy&name=about!views/About';
+
+const Home = props => <Bundle load={loadHome} {...props} />;
+const About = props => <Bundle load={loadAbout} {...props} />;
 
 import './styles/global';
 

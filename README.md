@@ -42,6 +42,7 @@ Compiles all files and runs bundle analyzer in the browser (http://localhost:888
 ## Features
 
 * [react-router](https://github.com/ReactTraining/react-router)
+* [Code Splitting](https://reacttraining.com/react-router/web/guides/code-splitting)
 * [styled-components](https://github.com/styled-components/styled-components)
 * ES2015 (ES6) and ES2016 (ES7) support
 * [ESLint](http://eslint.org/)
