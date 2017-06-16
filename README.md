@@ -13,14 +13,6 @@ npm install
 
 ## Commands
 
-#### build
-
-```
-$ npm run build
-```
-
-Compiles all files. Output is sent to the `public` directory.
-
 #### dev
 
 ```
@@ -29,10 +21,18 @@ $ npm run dev
 
 Runs your application in the browser (http://localhost:9000). Auto-compile & auto-reload the server after any file changes within the `app` directory.
 
-#### build-analyzer
+#### build
 
 ```
-$ npm run build-analyzer
+$ npm run build
+```
+
+Compiles all files. Output is sent to the `public` directory.
+
+#### build analyzer
+
+```
+$ npm run build:analyzer
 ```
 
 Compiles all files and runs bundle analyzer in the browser (http://localhost:8888).
