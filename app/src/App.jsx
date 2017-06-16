@@ -6,7 +6,7 @@ import AppMain from 'components/App/AppMain';
 import Home from 'views/Home';
 import About from 'views/About';
 
-import './global-styles';
+import './styles/global';
 
 export default class App extends Component {
   render () {
