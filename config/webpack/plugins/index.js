@@ -6,7 +6,7 @@ const BabiliPlugin = require('babili-webpack-plugin');
 const { isRelease, isAnalyze } = require('../../../scripts/utils');
 
 module.exports = (config) => {
-  config.plugins = [
+  const plugins = [
     new HtmlWebpackPlugin({
       template: './src/index.html'
     }),
@@ -18,7 +18,7 @@ module.exports = (config) => {
   ];
 
   if (isRelease) {
-    config.plugins.push(
+    plugins.push(
       new BabiliPlugin({
         removeConsole: true,
         removeDebugger: true
@@ -28,10 +28,10 @@ module.exports = (config) => {
 
 
   if (isAnalyze) {
-    config.plugins.push(
+    plugins.push(
       new BundleAnalyzerPlugin()
     );
   }
 
-  return config;
+  return Object.assign({}, config, { plugins });
 };

@@ -1,5 +1,5 @@
-module.exports = config => {
-  config.module = {
+module.exports = (config) => {
+  const module = {
     rules: [
       {
         test: /\.(js|jsx)$/,
@@ -9,5 +9,5 @@ module.exports = config => {
     ]
   };
 
-  return config;
+  return Object.assign({}, config, { module });
 };
