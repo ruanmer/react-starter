@@ -17,7 +17,7 @@ module.exports = () => {
     },
 
     output: {
-      path: path.join(__dirname, '../dist'),
+      path: path.join(__dirname, '../../dist'),
       filename: '[name].[hash].js',
       chunkFilename: '[name].[hash].js'
     },
@@ -38,7 +38,7 @@ module.exports = () => {
 
     devServer: {
       port: 9000,
-      contentBase: path.join(__dirname, '../dist'),
+      contentBase: path.join(__dirname, '../../dist'),
       historyApiFallback: true,
       stats: {
         children: false

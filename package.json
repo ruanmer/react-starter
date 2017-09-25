@@ -9,11 +9,11 @@
   },
   "license": "MIT",
   "scripts": {
-    "lint": "eslint webpack src --ext .js,.jsx",
+    "lint": "eslint config src --ext .js,.jsx",
     "test": "jest",
     "test:watch": "npm test -- --watch",
-    "dev": "NODE_ENV=development webpack-dev-server --config webpack/webpack",
-    "build": "rm -Rf dist/* | NODE_ENV=production webpack -p --config webpack/webpack",
+    "dev": "NODE_ENV=development webpack-dev-server --config config/webpack/webpack.config",
+    "build": "rm -Rf dist/* | NODE_ENV=production webpack -p --config config/webpack/webpack.config",
     "build:analyzer": "ANALYZER=true npm run build"
   },
   "dependencies": {
