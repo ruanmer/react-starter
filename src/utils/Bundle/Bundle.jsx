@@ -5,8 +5,6 @@ export default class Bundle extends PureComponent {
     Component: null
   }
 
-  mounted = false
-
   componentDidMount () {
     this.mounted = true;
 
@@ -23,11 +21,15 @@ export default class Bundle extends PureComponent {
     this.mounted = false;
   }
 
+  mounted = false
+
   load (props) {
     this.setState({ Component: null });
 
-    props.load(Component => {
-      this.mounted && this.setState({ Component: Component.default });
+    props.load((Component) => {
+      if (this.mounted) {
+        this.setState({ Component: Component.default });
+      }
     });
   }
 
