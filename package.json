@@ -11,10 +11,10 @@
   "scripts": {
     "lint": "eslint config src --ext .js,.jsx",
     "test": "jest",
-    "test:watch": "npm test -- --watch",
-    "dev": "NODE_ENV=development webpack-dev-server --config config/webpack/webpack.config",
-    "build": "rm -Rf dist/* | NODE_ENV=production webpack -p --config config/webpack/webpack.config",
-    "build:analyzer": "ANALYZER=true npm run build"
+    "test:watch": "yarn test -- --watch --notify",
+    "dev": "node scripts/server",
+    "build": "node scripts/build",
+    "release": "yarn build -- --release"
   },
   "dependencies": {
     "react": "^15.6.1",
@@ -38,6 +38,7 @@
     "jest": "^20.0.4",
     "pre-commit": "^1.2.2",
     "react-test-renderer": "^15.6.1",
+    "rimraf": "^2.6.2",
     "webpack": "^2.6.1",
     "webpack-bundle-analyzer": "^2.8.2",
     "webpack-dev-server": "^2.4.5"

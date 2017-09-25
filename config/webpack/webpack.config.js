@@ -3,17 +3,12 @@ const path = require('path');
 const plugins = require('./plugins');
 const loaders = require('./loaders');
 
-const envUtils = {
-  isProd: process.env.NODE_ENV === 'production',
-  isAnalyzer: process.env.ANALYZER
-};
+const { isDev } = require('../../scripts/utils');
 
 module.exports = () => {
-  const { isProd } = envUtils;
-
   let config = {
     entry: {
-      app: './src/index.js'
+      app: ['./src/index.js']
     },
 
     output: {
@@ -31,23 +26,16 @@ module.exports = () => {
     },
 
     stats: {
-      children: false
+      colors: true,
+      children: false,
+      modules: false
     },
 
-    devtool: !isProd ? 'source-map' : false,
-
-    devServer: {
-      port: 9000,
-      contentBase: path.join(__dirname, '../../dist'),
-      historyApiFallback: true,
-      stats: {
-        children: false
-      }
-    }
+    devtool: isDev ? 'source-map' : false
   };
 
-  config = loaders(config, envUtils);
-  config = plugins(config, envUtils);
+  config = loaders(config);
+  config = plugins(config);
 
   return config;
 };
