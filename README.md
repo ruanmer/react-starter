@@ -54,7 +54,6 @@ Compiles all files and runs bundle analyzer in the browser (http://localhost:888
 #### Tests
 
 ```
-yarn lint
 yarn test
 yarn test:watch
 yarn test:coverage
