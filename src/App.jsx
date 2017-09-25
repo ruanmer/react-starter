@@ -3,8 +3,8 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 import Bundle from 'utils/Bundle';
 
-import AppHeader from 'components/App/AppHeader';
-import AppMain from 'components/App/AppMain';
+import AppHeader from 'components/AppHeader';
+import AppMain from 'components/AppMain';
 
 import loadHome from 'bundle-loader?lazy&name=home!views/Home';
 import loadAbout from 'bundle-loader?lazy&name=about!views/About';
