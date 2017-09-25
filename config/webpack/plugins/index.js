@@ -1,8 +1,7 @@
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
-
-const uglifyConfig = require('./uglify.config');
+const BabiliPlugin = require('babili-webpack-plugin');
 
 const { isRelease, isAnalyze } = require('../../../scripts/utils');
 
@@ -20,9 +19,13 @@ module.exports = (config) => {
 
   if (isRelease) {
     config.plugins.push(
-      new webpack.optimize.UglifyJsPlugin(uglifyConfig)
+      new BabiliPlugin({
+        removeConsole: true,
+        removeDebugger: true
+      })
     );
   }
+
 
   if (isAnalyze) {
     config.plugins.push(

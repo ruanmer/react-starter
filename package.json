@@ -32,6 +32,7 @@
     "babel-preset-env": "^1.5.2",
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-2": "^6.24.1",
+    "babili-webpack-plugin": "^0.1.2",
     "bundle-loader": "^0.5.5",
     "enzyme": "^2.8.2",
     "eslint": "^4.0.0",
