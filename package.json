@@ -9,11 +9,11 @@
   },
   "license": "MIT",
   "scripts": {
-    "lint": "eslint webpack app --ext .js,.jsx",
+    "lint": "eslint webpack src --ext .js,.jsx",
     "test": "jest",
     "test:watch": "npm test -- --watch",
     "dev": "NODE_ENV=development webpack-dev-server --config webpack/webpack",
-    "build": "rm -Rf public/* | NODE_ENV=production webpack -p --config webpack/webpack",
+    "build": "rm -Rf dist/* | NODE_ENV=production webpack -p --config webpack/webpack",
     "build:analyzer": "ANALYZER=true npm run build"
   },
   "dependencies": {
@@ -51,10 +51,10 @@
   "jest": {
     "testEnvironment": "node",
     "roots": [
-      "app/src"
+      "src"
     ],
     "modulePaths": [
-      "app/src"
+      "src"
     ]
   }
 }

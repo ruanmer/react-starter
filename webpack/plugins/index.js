@@ -7,7 +7,7 @@ const uglifyConfig = require('./uglify.config');
 module.exports = (config, { isProd, isAnalyzer }) => {
   config.plugins = [
     new HtmlWebpackPlugin({
-      template: './app/index.html'
+      template: './src/index.html'
     })
   ];
 

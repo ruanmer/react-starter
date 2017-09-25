@@ -27,7 +27,7 @@ Runs your application in the browser (http://localhost:9000). Auto-compile & aut
 $ npm run build
 ```
 
-Compiles all files. Output is sent to the `public` directory.
+Compiles all files. Output is sent to the `dist` directory.
 
 #### build analyzer
 

@@ -13,19 +13,18 @@ module.exports = () => {
 
   let config = {
     entry: {
-      app: './app/src/index.js'
+      app: './src/index.js'
     },
 
     output: {
-      path: path.join(__dirname, '../public'),
+      path: path.join(__dirname, '../dist'),
       filename: '[name].[hash].js',
       chunkFilename: '[name].[hash].js'
     },
 
     resolve: {
       modules: [
-        'app',
-        'app/src',
+        'src',
         'node_modules'
       ],
       extensions: ['.js', '.jsx']
@@ -39,7 +38,7 @@ module.exports = () => {
 
     devServer: {
       port: 9000,
-      contentBase: path.join(__dirname, '../public'),
+      contentBase: path.join(__dirname, '../dist'),
       historyApiFallback: true,
       stats: {
         children: false
