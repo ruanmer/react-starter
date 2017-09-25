@@ -16,7 +16,7 @@
     "dev": "node scripts/server",
     "build": "node scripts/build",
     "release": "yarn build -- --release",
-    "start": "yarn release && node scripts/start"
+    "start": "node scripts/start"
   },
   "dependencies": {
     "react": "^15.6.1",

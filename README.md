@@ -1,52 +1,70 @@
 # react-starter
 
-React Starter is a web app boilerplate using React, Webpack, Babel.
+React Starter is a web app boilerplate using React, Styled Components, Webpack, Babel.
 
 ## Install
 
 ```
 git clone https://github.com/ruanmer/react-starter
-npm install
+yarn install
 ```
-
-> You can also use [Yarn](https://yarnpkg.com/) to install dependencies.
 
 ## Commands
 
-#### dev
+#### Start
 
 ```
-$ npm run dev
+yarn start
 ```
 
-Runs your application in the browser (http://localhost:9000). Auto-compile & auto-reload the server after any file changes within the `app` directory.
+Runs your application (from the `dist` directory) in the browser (http://localhost:3000). You need to generate a `dist` first.
 
-#### build
-
-```
-$ npm run build
-```
-
-Compiles all files. Output is sent to the `dist` directory.
-
-#### build analyzer
+#### Dev
 
 ```
-$ npm run build:analyzer
+yarn dev
+```
+
+Runs your application in the browser (http://localhost:9000). Auto-compile & auto-reload the server after any file changes within the `src` directory.
+
+#### Build
+
+```
+yarn build
+```
+
+Compiles all files (set NODE.ENV=development). Output is sent to the `dist` directory.
+
+#### Release
+
+```
+yarn release
+```
+
+Compiles all files (set NODE.ENV=production). Output is sent to the `dist` directory.
+
+#### Bundle Analyzer
+
+```
+yarn release --analyzer
 ```
 
 Compiles all files and runs bundle analyzer in the browser (http://localhost:8888).
 
-> You can also use [Yarn](https://yarnpkg.com/) to run the commands above.
-
-## Tests & Lint
+#### Tests
 
 ```
-$ npm run lint
-$ npm run test
-$ npm run test:watch
+yarn lint
+yarn test
+yarn test:watch
+yarn test:coverage
 ```
 
+#### Linters
+
+```
+yarn lint
+```
 
 ## Features
 
