@@ -33,7 +33,7 @@ Runs your application in the browser (http://localhost:9000). Auto-compile & aut
 yarn build
 ```
 
-Compiles all files (set NODE.ENV=development). Output is sent to the `dist` directory.
+Compiles all files (set `NODE.ENV=development`). Output is sent to the `dist` directory.
 
 #### Release
 
@@ -41,12 +41,12 @@ Compiles all files (set NODE.ENV=development). Output is sent to the `dist` dire
 yarn release
 ```
 
-Compiles all files (set NODE.ENV=production). Output is sent to the `dist` directory.
+Compiles all files (set `NODE.ENV=production`). Output is sent to the `dist` directory.
 
 #### Bundle Analyzer
 
 ```
-yarn release --analyzer
+yarn release --analyze
 ```
 
 Compiles all files and runs bundle analyzer in the browser (http://localhost:8888).
