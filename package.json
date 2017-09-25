@@ -12,6 +12,7 @@
     "lint": "eslint config src --ext .js,.jsx",
     "test": "jest",
     "test:watch": "yarn test -- --watch --notify",
+    "test:coverage": "yarn test -- --coverage",
     "dev": "node scripts/server",
     "build": "node scripts/build",
     "release": "yarn build -- --release",
