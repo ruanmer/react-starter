@@ -14,7 +14,8 @@
     "test:watch": "yarn test -- --watch --notify",
     "dev": "node scripts/server",
     "build": "node scripts/build",
-    "release": "yarn build -- --release"
+    "release": "yarn build -- --release",
+    "start": "yarn release && node scripts/start"
   },
   "dependencies": {
     "react": "^15.6.1",
@@ -34,6 +35,7 @@
     "enzyme": "^2.8.2",
     "eslint": "^4.0.0",
     "eslint-plugin-react": "^7.1.0",
+    "express": "^4.15.4",
     "html-webpack-plugin": "^2.28.0",
     "jest": "^20.0.4",
     "pre-commit": "^1.2.2",
