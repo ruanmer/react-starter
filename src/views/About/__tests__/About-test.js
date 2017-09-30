@@ -9,6 +9,6 @@ describe('About', () => {
       <About />
     );
 
-    expect(wrapper.node).toMatchSnapshot();
+    expect(wrapper.getElement()).toMatchSnapshot();
   });
 });

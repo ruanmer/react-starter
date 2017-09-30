@@ -9,6 +9,6 @@ describe('AppMain', () => {
       <AppMain />
     );
 
-    expect(wrapper.node).toMatchSnapshot();
+    expect(wrapper.getElement()).toMatchSnapshot();
   });
 });

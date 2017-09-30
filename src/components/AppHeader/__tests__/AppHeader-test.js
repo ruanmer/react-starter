@@ -9,6 +9,6 @@ describe('AppHeader', () => {
       <AppHeader />
     );
 
-    expect(wrapper.node).toMatchSnapshot();
+    expect(wrapper.getElement()).toMatchSnapshot();
   });
 });

@@ -14,7 +14,7 @@ describe('Bundle', () => {
       <Bundle load={f => f} />
     );
 
-    expect(wrapper.node).toMatchSnapshot();
+    expect(wrapper.getElement()).toMatchSnapshot();
   });
 
   it('should set mounted true when componentDidMount', () => {
@@ -69,7 +69,7 @@ describe('Bundle', () => {
     };
 
     const wrapper = shallow(
-      <Bundle load={loadComponent} />
+      <Bundle load={loadComponent} />, { disableLifecycleMethods: true }
     );
 
     wrapper.setProps({ load: loadComponent });
@@ -81,7 +81,7 @@ describe('Bundle', () => {
     const spyLoad = jest.spyOn(Bundle.prototype, 'load');
 
     const wrapper = shallow(
-      <Bundle load={f => f} />
+      <Bundle load={f => f} />, { disableLifecycleMethods: true }
     );
 
     const loadComponent = (callback) => {

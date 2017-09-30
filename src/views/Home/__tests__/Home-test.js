@@ -9,6 +9,6 @@ describe('Home', () => {
       <Home />
     );
 
-    expect(wrapper.node).toMatchSnapshot();
+    expect(wrapper.getElement()).toMatchSnapshot();
   });
 });
