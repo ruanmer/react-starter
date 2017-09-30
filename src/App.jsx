@@ -12,7 +12,7 @@ import loadAbout from 'bundle-loader?lazy&name=about!views/About';
 const Home = props => <Bundle load={loadHome} {...props} />;
 const About = props => <Bundle load={loadAbout} {...props} />;
 
-import './styles/global';
+import './styles/global.css';
 
 export default class App extends Component {
   render () {

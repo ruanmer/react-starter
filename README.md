@@ -1,13 +1,28 @@
 # react-starter
 
-React Starter is a web app boilerplate using React, Styled Components, Webpack, Babel.
+React Starter is a web app boilerplate using React, Styled Components (or CSS Modules), Webpack, Babel.
 
 ## Install
 
 ```
 git clone https://github.com/ruanmer/react-starter
+cd react-starter
 yarn install
+yarn release
+yarn start
 ```
+
+## Features
+
+* ES2015 (ES6) and ES2016 (ES7) support
+* [react-router](https://github.com/ReactTraining/react-router)
+* [Code Splitting](https://reacttraining.com/react-router/web/guides/code-splitting)
+* [styled-components](https://github.com/styled-components/styled-components)
+* [CSS Modules](https://github.com/css-modules/css-modules)
+* [ESLint](http://eslint.org/)
+* [Jest](https://facebook.github.io/jest/)
+* [Enzyme](http://airbnb.io/enzyme/)
+* [Webpack Bundle Analyzer](https://github.com/th0r/webpack-bundle-analyzer)
 
 ## Commands
 
@@ -64,14 +79,3 @@ yarn test:coverage
 ```
 yarn lint
 ```
-
-## Features
-
-* [react-router](https://github.com/ReactTraining/react-router)
-* [Code Splitting](https://reacttraining.com/react-router/web/guides/code-splitting)
-* [styled-components](https://github.com/styled-components/styled-components)
-* ES2015 (ES6) and ES2016 (ES7) support
-* [ESLint](http://eslint.org/)
-* [Jest](https://facebook.github.io/jest/)
-* [Enzyme](http://airbnb.io/enzyme/)
-* [Webpack Bundle Analyzer](https://github.com/th0r/webpack-bundle-analyzer)
