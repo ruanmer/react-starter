@@ -2,10 +2,18 @@ import React from 'react';
 import { NavLink as RouterNavLink } from 'react-router-dom';
 import styled from 'styled-components';
 
-import * as styles from './styles';
+const Wrapper = styled.header`
+  display: flex;
+  justify-content: center;
+  padding: 40px;
+  background: lightgray;
+`;
 
-const Wrapper = styled.header`${styles.wrapper}`;
-const NavLink = styled(RouterNavLink)`${styles.navLink}`;
+const NavLink = styled(RouterNavLink)`
+  &.active {
+    font-weight: bold;
+  }
+`;
 
 export default function AppHeader (props) {
   return (
