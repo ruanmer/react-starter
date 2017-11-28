@@ -70,8 +70,8 @@ Compiles all files and runs bundle analyzer in the browser (http://localhost:888
 
 ```
 yarn test
-yarn test:watch
-yarn test:coverage
+yarn test --watch
+yarn test --coverage
 ```
 
 #### Linters

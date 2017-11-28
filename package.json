@@ -11,12 +11,29 @@
   "scripts": {
     "lint": "eslint config src --ext .js,.jsx",
     "test": "jest",
-    "test:watch": "yarn test -- --watch --notify",
-    "test:coverage": "yarn test -- --coverage",
     "dev": "node scripts/server",
     "build": "node scripts/build",
-    "release": "yarn build -- --release",
+    "release": "yarn build --release",
     "start": "node scripts/start"
+  },
+  "pre-commit": {
+    "silent": true,
+    "run": [
+      "lint"
+    ]
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "roots": [
+      "src"
+    ],
+    "modulePaths": [
+      "src"
+    ],
+    "setupFiles": [
+      "raf/polyfill",
+      "<rootDir>/config/jest/setupTests.js"
+    ]
   },
   "dependencies": {
     "react": "^16.0.0",
@@ -51,24 +68,5 @@
     "webpack": "^3.6.0",
     "webpack-bundle-analyzer": "^2.8.2",
     "webpack-dev-server": "^2.9.1"
-  },
-  "pre-commit": {
-    "silent": true,
-    "run": [
-      "lint"
-    ]
-  },
-  "jest": {
-    "testEnvironment": "node",
-    "roots": [
-      "src"
-    ],
-    "modulePaths": [
-      "src"
-    ],
-    "setupFiles": [
-      "raf/polyfill",
-      "<rootDir>/config/jest/setupTests.js"
-    ]
   }
 }
